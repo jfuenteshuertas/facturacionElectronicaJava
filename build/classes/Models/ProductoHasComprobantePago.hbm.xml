@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-sep-2017 12:20:58 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.ProductoHasComprobantePago" table="Producto_has_ComprobantePago" catalog="kipudb" optimistic-lock="version">
+        <composite-id name="id" class="Models.ProductoHasComprobantePagoId">
+            <key-property name="productoIdProducto" type="string">
+                <column name="Producto_idProducto" length="13" />
+            </key-property>
+            <key-property name="comprobantePagoSerieComprobante" type="string">
+                <column name="ComprobantePago_serieComprobante" length="11" />
+            </key-property>
+            <key-property name="comprobantePagoEmpresaIdEmpresa" type="int">
+                <column name="ComprobantePago_Empresa_idEmpresa" />
+            </key-property>
+            <key-property name="comprobantePagoTipoComprobanteIdTipoComprobante" type="string">
+                <column name="ComprobantePago_TipoComprobante_idTipoComprobante" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="cantidad" type="float">
+            <column name="cantidad" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="impuesto" type="float">
+            <column name="impuesto" precision="12" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

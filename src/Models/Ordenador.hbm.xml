@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-sep-2017 12:20:58 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.Ordenador" table="Ordenador" catalog="kipudb" optimistic-lock="version">
+        <id name="idOrdenador" type="java.lang.Integer">
+            <column name="idOrdenador" />
+            <generator class="identity" />
+        </id>
+        <property name="sistemaOperativo" type="string">
+            <column name="sistemaOperativo" length="45" />
+        </property>
+        <property name="nombreUsuario" type="string">
+            <column name="nombreUsuario" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

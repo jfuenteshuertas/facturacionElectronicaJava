@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-ago-2017 15:17:09 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.Ubprovincia" table="ubprovincia" catalog="kipudb" optimistic-lock="version">
+        <id name="idProv" type="int">
+            <column name="idProv" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="ubdepartamento" class="Models.Ubdepartamento" fetch="select">
+            <column name="idDepa" not-null="true" />
+        </many-to-one>
+        <property name="provincia" type="string">
+            <column name="provincia" length="50" not-null="true" />
+        </property>
+        <set name="ubdistritos" table="ubdistrito" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idProv" not-null="true" />
+            </key>
+            <one-to-many class="Models.Ubdistrito" />
+        </set>
+    </class>
+</hibernate-mapping>

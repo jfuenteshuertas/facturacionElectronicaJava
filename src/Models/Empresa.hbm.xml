@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-sep-2017 12:20:58 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.Empresa" table="Empresa" catalog="kipudb" optimistic-lock="version">
+        <id name="idEmpresa" type="java.lang.Integer">
+            <column name="idEmpresa" />
+            <generator class="identity" />
+        </id>
+        <property name="rucEmpresa" type="string">
+            <column name="rucEmpresa" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="nombreComercial" type="string">
+            <column name="nombreComercial" length="100" not-null="true" />
+        </property>
+        <property name="direccionFiscal" type="string">
+            <column name="direccionFiscal" not-null="true" />
+        </property>
+        <property name="tipoEmpresa" type="string">
+            <column name="tipoEmpresa" length="2" not-null="true" />
+        </property>
+        <property name="fechaCreacion" type="timestamp">
+            <column name="fechaCreacion" length="0" not-null="true" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="2" not-null="true" />
+        </property>
+        <property name="logo" type="string">
+            <column name="logo" length="45" />
+        </property>
+        <property name="ubigeo" type="string">
+            <column name="ubigeo" length="9" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

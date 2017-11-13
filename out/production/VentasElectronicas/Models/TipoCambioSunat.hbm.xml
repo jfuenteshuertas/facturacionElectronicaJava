@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-ago-2017 15:17:09 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.TipoCambioSunat" table="TipoCambioSUNAT" catalog="kipudb" optimistic-lock="version">
+        <id name="idTipoCambio" type="date">
+            <column name="idTipoCambio" length="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="compra" type="float">
+            <column name="compra" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="venta" type="float">
+            <column name="venta" precision="12" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

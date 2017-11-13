@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-sep-2017 12:20:58 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.EmpresaHasProducto" table="Empresa_has_Producto" catalog="kipudb" optimistic-lock="version">
+        <composite-id name="id" class="Models.EmpresaHasProductoId">
+            <key-property name="empresaIdEmpresa" type="int">
+                <column name="Empresa_idEmpresa" />
+            </key-property>
+            <key-property name="productoIdProducto" type="string">
+                <column name="Producto_idProducto" length="13" />
+            </key-property>
+        </composite-id>
+        <property name="precioUnit" type="float">
+            <column name="precioUnit" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="unidadMedida" type="string">
+            <column name="unidadMedida" length="20" not-null="true" />
+        </property>
+        <property name="moneda" type="string">
+            <column name="moneda" length="4" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService?wsdl" uri="xml-resources/web-service-references/billService/wsdl/e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService.wsdl"/>
+    <system systemId="https://e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService?ns1.wsdl" uri="xml-resources/web-service-references/billService/wsdl/e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService.ns1.wsdl"/>
+    <system systemId="https://e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService?ns2.wsdl" uri="xml-resources/web-service-references/billService/wsdl/e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService.ns2.wsdl"/>
+    <system systemId="https://e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService.xsd2.xsd" uri="xml-resources/web-service-references/billService/wsdl/e-factura.sunat.gob.pe/ol-ti-itcpfegem/billService.xsd2.xsd"/>
+    <system systemId="https://e-factura.sunat.gob.pe/ol-ti-itcpfegem-beta/billService?wsdl" uri="xml-resources/web-service-references/billService/wsdl/e-factura.sunat.gob.pe/ol-ti-itcpfegem-beta/billService.wsdl"/>
+    <system systemId="https://e-factura.sunat.gob.pe/ol-ti-itcpfegem-beta/billService?ns1.wsdl" uri="xml-resources/web-service-references/billService/wsdl/e-factura.sunat.gob.pe/ol-ti-itcpfegem-beta/billService.ns1.wsdl"/>
+    <system systemId="file:/Users/javierfuenteshuertas/NetBeansProjects/VentasElectronicas/sunattest.wsdl" uri="xml-resources/web-service-references/sunattest/wsdl/sunattest.wsdl"/>
+    <system systemId="https://e-factura.sunat.gob.pe/ol-ti-itcpfegem-beta/billService.ns1.wsdl" uri="xml-resources/web-service-references/sunattest/wsdl/e-factura.sunat.gob.pe/ol-ti-itcpfegem-beta/billService.ns1.wsdl"/>
+    <system systemId="https://e-factura.sunat.gob.pe/ol-ti-itcpfegem-beta/billService.xsd2.xsd" uri="xml-resources/web-service-references/sunattest/wsdl/e-factura.sunat.gob.pe/ol-ti-itcpfegem-beta/billService.xsd2.xsd"/>
+    <system systemId="https://e-beta.sunat.gob.pe/ol-ti-itemision-otroscpe-gem-beta/billService?wsdl" uri="xml-resources/web-service-references/billService/wsdl/e-beta.sunat.gob.pe/ol-ti-itemision-otroscpe-gem-beta/billService.wsdl"/>
+    <system systemId="https://e-beta.sunat.gob.pe/ol-ti-itemision-otroscpe-gem-beta/billService?ns1.wsdl" uri="xml-resources/web-service-references/billService/wsdl/e-beta.sunat.gob.pe/ol-ti-itemision-otroscpe-gem-beta/billService.ns1.wsdl"/>
+    <system systemId="https://e-beta.sunat.gob.pe/ol-ti-itemision-otroscpe-gem-beta/billService.xsd2.xsd" uri="xml-resources/web-service-references/billService/wsdl/e-beta.sunat.gob.pe/ol-ti-itemision-otroscpe-gem-beta/billService.xsd2.xsd"/>
+    <system systemId="file:/Users/javierfuenteshuertas/Manuales%20Comprobantes%20Electronicos%20SUNT/BetaSunat.wsdl" uri="wsdl/BetaSunat.wsdl"/>
+    <system systemId="https://e-beta.sunat.gob.pe:443/ol-ti-itcpfegem-beta/billService.ns1.wsdl" uri="wsdl/e-beta.sunat.gob.pe_443/ol-ti-itcpfegem-beta/billService.ns1.wsdl"/>
+    <system systemId="https://e-beta.sunat.gob.pe:443/ol-ti-itcpfegem-beta/billService.xsd2.xsd" uri="wsdl/e-beta.sunat.gob.pe_443/ol-ti-itcpfegem-beta/billService.xsd2.xsd"/>
+</catalog>

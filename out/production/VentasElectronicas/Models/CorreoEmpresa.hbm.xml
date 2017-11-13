@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-ago-2017 15:17:09 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.CorreoEmpresa" table="CorreoEmpresa" catalog="kipudb" optimistic-lock="version">
+        <id name="email" type="string">
+            <column name="email" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="passwordEmail" type="binary">
+            <column name="passwordEmail" not-null="true" />
+        </property>
+        <property name="empresaIdEmpresa" type="int">
+            <column name="Empresa_idEmpresa" not-null="true" />
+        </property>
+        <property name="starttls" type="string">
+            <column name="starttls" length="5" not-null="true" />
+        </property>
+        <property name="host" type="string">
+            <column name="host" length="150" />
+        </property>
+        <property name="port" type="string">
+            <column name="port" length="5" />
+        </property>
+    </class>
+</hibernate-mapping>

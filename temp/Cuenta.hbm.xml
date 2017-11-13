@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-jul-2017 16:17:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.Cuenta" table="Cuenta" catalog="Ventas" optimistic-lock="version">
+        <id name="idCuenta" type="java.lang.Integer">
+            <column name="idCuenta" />
+            <generator class="identity" />
+        </id>
+        <property name="usuario" type="string">
+            <column name="usuario" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="binary">
+            <column name="password" not-null="true" />
+        </property>
+        <property name="ultimoAcceso" type="timestamp">
+            <column name="ultimoAcceso" length="19" />
+        </property>
+        <property name="empresaIdEmpresa" type="int">
+            <column name="Empresa_idEmpresa" not-null="true" />
+        </property>
+        <property name="nombrePersona" type="string">
+            <column name="nombrePersona" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

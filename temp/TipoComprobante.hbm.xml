@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-jul-2017 16:17:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.TipoComprobante" table="TipoComprobante" catalog="Ventas" optimistic-lock="version">
+        <id name="idTipoComprobante" type="string">
+            <column name="idTipoComprobante" length="1" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreComprobante" type="string">
+            <column name="nombreComprobante" length="45" not-null="true" />
+        </property>
+        <property name="numTipoComprobante" type="string">
+            <column name="numTipoComprobante" length="2" not-null="true" />
+        </property>
+        <property name="abreviatura" type="string">
+            <column name="abreviatura" length="45" />
+        </property>
+        <property name="indAfectoRetencion" type="int">
+            <column name="indAfectoRetencion" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

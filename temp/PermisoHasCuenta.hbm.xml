@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-jul-2017 16:17:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.PermisoHasCuenta" table="Permiso_has_Cuenta" catalog="Ventas" optimistic-lock="version">
+        <composite-id name="id" class="Models.PermisoHasCuentaId">
+            <key-property name="permisoIdPermiso" type="int">
+                <column name="Permiso_idPermiso" />
+            </key-property>
+            <key-property name="cuentaIdCuenta" type="int">
+                <column name="Cuenta_idCuenta" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

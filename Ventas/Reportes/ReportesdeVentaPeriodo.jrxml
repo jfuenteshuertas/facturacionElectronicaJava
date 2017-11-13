@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf0c6fa0-4366-478e-ada8-deab7cade683">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cliente_numero" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipoComprobante" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="logoEmpresa" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalBruto" class="java.lang.Float">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalImpuesto" class="java.lang.Float">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalGeneral" class="java.lang.Float">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mes" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="anio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nombreMes" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *,nombreUbigeo(e.ubigeo)as Localizacion from comprobantepago cp inner join empresa e on e.idEmpresa=Empresa_idEmpresa inner join tipocomprobante tc on tc.idTipoComprobante=TipoComprobante_idTipoComprobante  where tc.idTipoComprobante=$P{tipoComprobante} and e.idEmpresa=$P{idEmpresa} and  month(fechaEmision)=$P{mes} and year(fechaEmision)=$P{anio}]]>
+	</queryString>
+	<field name="serieComprobante" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoBruto" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="impuesto" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="moneda" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaEmision" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="observacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoCambioCompra" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoCambioVenta" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaRegistro" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cliente_numero" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cuenta_idCuenta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Empresa_idEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TipoComprobante_idTipoComprobante" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rucEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreComercial" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionFiscal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaCreacion" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="logo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ubigeo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idTipoComprobante" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreComprobante" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="abreviatura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="indAfectoRetencion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numTipoComprobante" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Localizacion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="158" y="0" width="192" height="15" uuid="605ed237-9d60-4c7a-ad41-f3f88ff76071"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreComercial}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="158" height="60" uuid="0a4f1ba2-013b-4a2f-8e3f-1b0f2170e450"/>
+				<imageExpression><![CDATA[$P{logoEmpresa}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="158" y="20" width="192" height="12" uuid="6d2b6e4f-7dd8-47d6-916c-2ef980d754be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccionFiscal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="408" y="0" width="57" height="20" uuid="80e90f6f-d947-46e0-afa7-78e55cca790d"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Página:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="40" width="57" height="20" uuid="59000d60-7e40-4f29-b121-6cd979cdad5e"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Hora:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="20" width="57" height="20" uuid="9c16cb0e-34a5-4fb0-b610-503b0fbe5cf4"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="465" y="0" width="90" height="20" uuid="aa22a3fa-0a27-4e45-a4ac-f9469542bc46"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="60" width="555" height="1" uuid="33c54258-2a16-402e-91da-832bf0055271"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="158" y="32" width="192" height="12" uuid="10e0f612-da58-4225-b2d6-612962e18a76"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Localizacion}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="465" y="20" width="90" height="20" uuid="efe209a5-b11b-4cda-897f-c7814aef14e7"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="465" y="40" width="90" height="20" uuid="962f8ee4-b505-434f-bd12-978ad62f5e41"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="115" y="0" width="282" height="17" uuid="f7b4ffd3-37fb-4e66-99e1-71f095efbe60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE COMPROBANTES POR PERIODO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="17" width="34" height="12" uuid="954161f9-3922-4c6c-a615-ca46270fe3b8"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Periodo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="29" width="161" height="18" uuid="28c8c201-f138-4bc1-bcef-73b2eccdfcea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreComprobante}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="273" y="17" width="16" height="12" uuid="7a87de5d-7591-4968-ba62-9a5750ff6422"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="289" y="17" width="52" height="12" uuid="ecedd36f-e362-498a-bb50-7476024d6045"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{anio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="17" width="57" height="12" uuid="cca8e42f-d7e4-4162-bc18-dc159bebcb1d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreMes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="84b34572-3c44-4cf1-b0bc-bdf41663ca86"/>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="10" width="554" height="14" backcolor="#CCCCCC" uuid="822ac23d-2734-4a15-87fa-6017738dc108"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="10" width="45" height="14" uuid="0daf9179-46b9-46d1-ba49-548ffd9f7f5d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="10" width="70" height="14" uuid="99004a36-3b91-4591-93c0-740ac98a497e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="10" width="100" height="14" uuid="9315942e-cdb5-4dd3-bc6e-5debcbe0babe"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[F. Emisión]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="10" width="59" height="14" uuid="3865b5bd-652b-4831-ac7e-ca664a427c35"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Moneda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="10" width="89" height="14" uuid="afab0c37-39a3-4443-985a-0e99dec8c8ad"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Base imponible]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="10" width="66" height="14" uuid="0600399b-95be-4a93-89ca-38c499b536eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[I.G.V.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="10" width="68" height="14" uuid="ee24eba4-f790-4259-a079-ea5249ef45f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="10" width="58" height="14" uuid="cb3688fe-371b-46d0-9a08-2007a30efbd7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="45" height="14" uuid="2f283689-98d7-4d9c-a7c2-044b635933a3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{serieComprobante}.substring( 0, 3 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="0" width="100" height="14" uuid="48770fa9-1cb5-4a0a-a774-0b547fa28943"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaEmision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="0" width="57" height="14" uuid="dfdef798-af29-4f1a-b774-98e3dfd5e837"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{moneda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="0" width="89" height="14" uuid="c1daa3f7-e070-424b-a91e-db11f0d299c7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{saldoBruto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="364" y="0" width="64" height="14" uuid="0dd02174-7946-41b2-b988-f24bc5887490"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{impuesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="0" width="68" height="14" uuid="1d963346-d9c6-4054-aba8-9acd2b88f18b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="0" width="59" height="14" uuid="670619ea-a53b-49ee-9963-b4e8e9bb4cf7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="0" width="70" height="14" uuid="bdc2743b-ffa0-4c72-9f78-4d6e9f78ece1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{serieComprobante}.substring( 3 )]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="47" splitType="Stretch">
+			<rectangle>
+				<reportElement x="273" y="9" width="277" height="36" uuid="6c35ec41-2566-4eed-bfbf-20c57b4e5fc0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="274" y="9" width="152" height="12" uuid="8a335c4f-53af-4ad2-b9dd-9ca8a52bced5"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Base imponible ==>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="21" width="152" height="12" uuid="fa1ad1cd-2513-4486-b1d8-1fdc750646a8"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Impuestos ==>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="33" width="152" height="12" uuid="49f1530f-6181-49d2-bb29-62ac162718d2"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total General ==>]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="550" height="1" uuid="b6948679-c22c-4292-b222-66f5cbc91393"/>
+			</line>
+			<textField>
+				<reportElement x="428" y="9" width="109" height="12" uuid="7f1e6fcf-3e33-4621-a6dd-74a90cbeffaf"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{totalBruto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="21" width="109" height="12" uuid="f56dfca3-2579-4f12-9872-58c503cd3ad2"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{totalImpuesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="33" width="109" height="12" uuid="4db8be1e-0a54-405d-bd4e-6a33100d60fc"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{totalGeneral}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="194" y="23" width="80" height="20" uuid="b6204a91-f32f-4489-9973-1508db210fc6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pag "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="275" y="23" width="40" height="20" uuid="06924a21-8679-49be-91ba-6dbef4168f82"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="25" height="21" uuid="54d48d0e-4058-4005-baa9-230d2dbeebe0"/>
+				<imageExpression><![CDATA["/Users/javierfuenteshuertas/NetBeansProjects/VentasElectronicas/src/Images/Plantilla-Planeta-Hojas.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="25" y="1" width="529" height="20" uuid="92cbad6d-e535-446a-89d4-706dcabd133b"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Antes de imprimir este correo electrónico, piense bien si es necesario hacerlo: El medio ambiente es cuestión de todos.]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

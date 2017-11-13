@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-ago-2017 15:17:09 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.ComprobantePago" table="ComprobantePago" catalog="kipudb" optimistic-lock="version">
+        <composite-id name="id" class="Models.ComprobantePagoId">
+            <key-property name="serieComprobante" type="string">
+                <column name="serieComprobante" length="11" />
+            </key-property>
+            <key-property name="empresaIdEmpresa" type="int">
+                <column name="Empresa_idEmpresa" />
+            </key-property>
+            <key-property name="tipoComprobanteIdTipoComprobante" type="string">
+                <column name="TipoComprobante_idTipoComprobante" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="saldoBruto" type="float">
+            <column name="saldoBruto" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="impuesto" type="float">
+            <column name="impuesto" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="total" type="float">
+            <column name="total" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="moneda" type="string">
+            <column name="moneda" length="4" not-null="true" />
+        </property>
+        <property name="fechaEmision" type="timestamp">
+            <column name="fechaEmision" length="0" not-null="true" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="9" not-null="true" />
+        </property>
+        <property name="fechaRegistro" type="timestamp">
+            <column name="fechaRegistro" length="0" />
+        </property>
+        <property name="clienteNumero" type="string">
+            <column name="Cliente_numero" length="11" not-null="true" />
+        </property>
+        <property name="cuentaIdCuenta" type="int">
+            <column name="Cuenta_idCuenta" not-null="true" />
+        </property>
+        <property name="serieGuia" type="string">
+            <column name="serieGuia" length="3" />
+        </property>
+        <property name="numGuia" type="string">
+            <column name="numGuia" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

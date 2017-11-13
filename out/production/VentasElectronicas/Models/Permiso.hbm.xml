@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-ago-2017 15:17:09 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.Permiso" table="Permiso" catalog="kipudb" optimistic-lock="version">
+        <id name="idPermiso" type="java.lang.Integer">
+            <column name="idPermiso" />
+            <generator class="identity" />
+        </id>
+        <property name="nombrePermiso" type="string">
+            <column name="nombrePermiso" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

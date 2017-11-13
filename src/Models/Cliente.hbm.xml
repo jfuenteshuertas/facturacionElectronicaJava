@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-sep-2017 12:20:58 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.Cliente" table="Cliente" catalog="kipudb" optimistic-lock="version">
+        <composite-id name="id" class="Models.ClienteId">
+            <key-property name="numero" type="string">
+                <column name="numero" length="11" />
+            </key-property>
+            <key-property name="tipoDocumento" type="string">
+                <column name="tipoDocumento" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="direccion" type="string">
+            <column name="direccion" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="ubigeo" type="string">
+            <column name="ubigeo" length="6" />
+        </property>
+    </class>
+</hibernate-mapping>

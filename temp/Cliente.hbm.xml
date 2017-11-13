@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-jul-2017 16:17:02 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.Cliente" table="Cliente" catalog="Ventas" optimistic-lock="version">
+        <id name="numero" type="string">
+            <column name="numero" length="11" />
+            <generator class="assigned" />
+        </id>
+        <property name="tipoDocumento" type="short">
+            <column name="tipoDocumento" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="ubigeo" type="string">
+            <column name="ubigeo" length="6" />
+        </property>
+    </class>
+</hibernate-mapping>
